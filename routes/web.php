@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\ReporteController;
-use App\Http\Controllers\ImagenController;
+use App\Exports\ReportesExport;
+use Maatwebsite\Excel\Facades\Excel;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +20,9 @@ use App\Http\Controllers\ImagenController;
 Route::get('/', function () {
     return redirect()->route('login');
 });
-
+Route::get('/excel', function () {
+    return Excel::download(new ReportesExport, 'reportes.xlsx');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

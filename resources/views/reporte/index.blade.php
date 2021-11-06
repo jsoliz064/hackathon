@@ -12,7 +12,8 @@
               {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
               
                 <a class="btn btn-primary btb-sm" href="{{route('reportes.create')}}">Registrar reporte</a>    
-            
+                <a class="btn btn-primary btb-sm" href="{{url('/excel')}}">Exportar reporte</a>    
+
           </div>
         </div>
 
