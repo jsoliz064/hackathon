@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Clientes')
+@section('title', 'Reporte')
 
 @section('content_header')
-  <h1>Animales</h1>
+  <h1>Reportes</h1>
 @stop
 
 @section('content')
@@ -11,45 +11,46 @@
     <div class="card-header">
         {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
         
-          <a class="btn btn-primary btb-sm" href="{{url('/animal/create')}}">Registrar Animal</a>    
+          <a class="btn btn-primary btb-sm" href="{{url('/reporte/create')}}">Registrar reporte</a>    
        
     </div>
   </div>
 
   <div class="card">
     <div class="card-body">
-      <table class="table table-striped" id="animales" >
+      <table class="table table-striped" id="reportes" >
         <thead>
           <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Tipo</th>
+            <th scope="col">ID</th>
+            <th scope="col">Ubicacion</th>
+            {{--<th scope="col">Tipo</th>
             <th scope="col">Nombre Cientifico</th>
             <th scope="col">Orden</th>
             <th scope="col">Familia</th>
-            <th scope="col" width="0%">Acciones</th>
-            
+            <th scope="col" width="0%">Acciones</th>--}}
             {{-- <th colspan=""></th> --}}
           </tr>
         </thead>
         
         <tbody>
 
-          @foreach ($animals as $animal)
+          @foreach ($reportes as $reporte)
             <tr>
-              <td>{{$animal->nombre}}</td>
-              <td>{{$animal->tipo}}</td>
-              <td>{{$animal->nombre_cientifico}}</td>
-              <td>{{$animal->orden}}</td>
-              <td>{{$animal->familia}}</td>
+              <td>{{$reporte->id}}</td>
+              <td>{{$reporte->Ubicacion}}</td>
+             {{-- <td>{{$reporte->tipo}}</td>
+              <td>{{$reporte->nombre_cientifico}}</td>
+              <td>{{$reporte->orden}}</td>
+              <td>{{$reporte->familia}}</td>--}}
               <td >
-                <form  action="{{route('animal.destroy',$animal)}}" method="post">
+                <form  action="{{route('reporte.destroy',$reporte)}}" method="post">
                     @csrf
                   @method('delete')
-                    <a  class="btn btn-primary btn-sm" href="{{route('animal.show',$animal)}}">Ver</a>  
+                    <a  class="btn btn-primary btn-sm" href="{{route('reporte.show',$reporte)}}">Ver</a>  
                   
 
                    
-                      <a class="btn btn-info btn-sm" href="{{route('animal.edit',$animal)}}">Editar</a>                 
+                      <a class="btn btn-info btn-sm" href="{{route('reporte.edit',$reporte)}}">Editar</a>                 
                
 
                     

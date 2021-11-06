@@ -309,6 +309,11 @@ return [
             'url'        => 'animal',
         ],
         [
+            'text'       => 'Reportes',
+            'icon_color' => 'red',
+            'url'        => 'reporte',
+        ],
+        [
             'text'       => 'important',
             'icon_color' => 'red',
             'url'        => '#',

@@ -22,3 +22,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('animal', App\Http\Controllers\AnimalController::class);
+Route::resource('reporte', App\Http\Controllers\ReporteController::class);
