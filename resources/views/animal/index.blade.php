@@ -22,6 +22,7 @@
         <thead>
           <tr>
             <th scope="col">Nombre</th>
+            <th scope="col">Tipo</th>
             <th scope="col">Nombre Cientifico</th>
             <th scope="col">Orden</th>
             <th scope="col">Familia</th>

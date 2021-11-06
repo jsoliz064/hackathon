@@ -72,7 +72,7 @@ class AnimalController extends Controller
      */
     public function edit(Animal $animal)
     {
-        //
+        return view('animal.edit',compact('animal'));
     }
 
     /**
@@ -85,6 +85,17 @@ class AnimalController extends Controller
     public function update(Request $request, Animal $animal)
     {
         //
+        date_default_timezone_set("America/La_Paz");
+        $animal->nombre=$request->nombre;
+        $animal->tipo=$request->tipo;
+        $animal->nombre_cientifico=$request->nombre_cientifico;
+        $animal->orden=$request->orden;
+        $animal->familia=$request->familia;
+        $animal->save();
+
+       
+
+        return redirect()->route('animal.index');
     }
 
     /**
