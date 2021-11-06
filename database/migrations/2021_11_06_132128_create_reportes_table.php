@@ -16,7 +16,8 @@ class CreateReportesTable extends Migration
         Schema::create('reportes', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('id_animal');
-            $table->string('ubicacion');
+            $table->string('latitud');
+            $table->string('longitud');
             $table->string('descripcion');
             $table->foreign('id_animal')->references('id')->on('animals')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();

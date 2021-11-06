@@ -37,7 +37,18 @@ class ReporteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        date_default_timezone_set("America/La_Paz");
+        $reportes=Reporte::create([
+            'id_animal'=>request('id_animal'),
+            'latitud'=>request('latitud'),
+            'longitud'=>request('longitud'),
+            'descripcion'=>request('descripcion'),
+            
+        ]);
+
+       
+        return redirect()->route('reporte.index');
     }
 
     /**

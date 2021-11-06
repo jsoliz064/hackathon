@@ -22,7 +22,8 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Ubicacion</th>
+            <th scope="col">Latitud</th>
+            <th scope="col">Longitud</th>
             <th scope="col">Descripcion</th>
             {{--<th scope="col">Tipo</th>
             <th scope="col">Nombre Cientifico</th>
@@ -34,12 +35,13 @@
         </thead>
         
         <tbody>
-
+ 
           @foreach ($reportes as $reporte)
             <tr>
               <td>{{$reporte->id}}</td>
-              <td>{{$reporte->Ubicacion}}</td>
-              <td>{{$reporte->Descripcion}}</td>
+              <td>{{$reporte->latitud}}</td>
+              <td>{{$reporte->longitud}}</td>
+              <td>{{$reporte->descripcion}}</td>
              {{-- <td>{{$reporte->tipo}}</td>
               <td>{{$reporte->nombre_cientifico}}</td>
               <td>{{$reporte->orden}}</td>

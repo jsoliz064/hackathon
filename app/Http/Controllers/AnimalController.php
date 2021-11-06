@@ -42,7 +42,7 @@ class AnimalController extends Controller
         //
 
         date_default_timezone_set("America/La_Paz");
-        $clientes=Animal::create([
+        $animals=Animal::create([
             'nombre'=>request('nombre'),
             'tipo'=>request('tipo'),
             'nombre_cientifico'=>request('nombre_cientifico'),
