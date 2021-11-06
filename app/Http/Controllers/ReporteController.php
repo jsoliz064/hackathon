@@ -98,7 +98,7 @@ class ReporteController extends Controller
     {
        
       $imagens=DB::table('imagens')->where('id_reporte',$reporte->id)->orderBy('created_at','desc')->paginate(5);  
-        return view('reporte.showImagen',compact ('reporte','imagens'));
+        return view('imagen.post',compact ('reporte','imagens'));
     }
     /**
      * Remove the specified resource from storage.

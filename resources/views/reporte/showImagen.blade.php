@@ -44,8 +44,8 @@
                           <td class="border px-14 py-1">{{$imagen->id_reporte}}</td>
                           <td class="border px-14 py-1">{{$imagen->url}}</td>
                           
-                         {{--  <td class="border px-14 py-1"> <img src="images/{{$archivo->imagen}}" width="75%" > </td>
-                      --}}
+                         <td class="border px-14 py-1"> <img src="../../../../{{$imagen->url}}" width="75%" height="80px"> </td>
+                    
                           <td class="border px-14 py-1">
                          
                             <form action="{{route('imagens.destroy',$imagen->id)}}" method="POST">
