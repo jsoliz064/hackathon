@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\ReporteController;
+use App\Http\Controllers\ImagenController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +27,5 @@ Route::resource('animal', App\Http\Controllers\AnimalController::class);
 Route::get('animal/reporte/show/{animal}',[AnimalController::class,'showReportes'])->name('animal.reporte');
 Route::resource('reporte', App\Http\Controllers\ReporteController::class);
 Route::get('reporte/mapa/show/{reporte}',[ReporteController::class,'showMapa'])->name('reporte.mapa');
+Route::get('reporte/imagen/show/{reporte}',[ReporteController::class,'showImagen'])->name('reporte.imagen');
+Route::resource('imagen', App\Http\Controllers\ImagenController::class);
