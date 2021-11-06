@@ -23,6 +23,7 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Ubicacion</th>
+            <th scope="col">Descripcion</th>
             {{--<th scope="col">Tipo</th>
             <th scope="col">Nombre Cientifico</th>
             <th scope="col">Orden</th>
@@ -38,6 +39,7 @@
             <tr>
               <td>{{$reporte->id}}</td>
               <td>{{$reporte->Ubicacion}}</td>
+              <td>{{$reporte->Descripcion}}</td>
              {{-- <td>{{$reporte->tipo}}</td>
               <td>{{$reporte->nombre_cientifico}}</td>
               <td>{{$reporte->orden}}</td>
