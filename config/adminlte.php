@@ -304,6 +304,11 @@ return [
         ],
         ['header' => 'labels'],
         [
+            'text'       => 'Animales',
+            'icon_color' => 'red',
+            'url'        => 'animal',
+        ],
+        [
             'text'       => 'important',
             'icon_color' => 'red',
             'url'        => '#',

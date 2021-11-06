@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="loginColor">
+
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -69,5 +70,41 @@
             </div>
         </div>
     </div>
+
 </div>
 @endsection
+
+{{--
+
+<html lang="es">
+    <head>
+      
+        <link href="login.css"   rel="stylesheet" type="text/css" >
+        <meta charset="UTF-8">
+       
+        
+        
+        <title> Iniciar sesion </title>
+    </head>
+    <body>
+        
+           
+            
+
+          <div class="login-page">
+            <div class="form">
+              <form class="login" action="sesion.php" method="POST">
+               
+                <input type="text" name="usuario"  placeholder="Introduzca su usuario"/>
+                <input type="password" name="contraseña" placeholder="Introduzca su contraseña"/>
+                
+                <button>login</button>
+                
+              </form>
+            </div>
+          </div>
+
+    </body>
+   
+    </html>
+--}}
