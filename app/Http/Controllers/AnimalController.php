@@ -72,13 +72,7 @@ class AnimalController extends Controller
       
         return view('animal.showReportes',compact ('reportes','animal'));
     }
-    public function showMapa(Animal $animal)
-    {
-       
-       /*  $coordenadas=DB::table('reportes')->where('id_animal',$animal->id)->orderBy('created_at','desc')->get(); */
-      
-        return view('animal.showMapa',compact ('animal'));
-    }
+  
 
     /**
      * Show the form for editing the specified resource.

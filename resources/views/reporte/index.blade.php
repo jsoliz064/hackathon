@@ -22,6 +22,8 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
+            <th scope="col">ID animal</th>
+            <th scope="col">ID user</th>
             <th scope="col">Latitud</th>
             <th scope="col">Longitud</th>
             <th scope="col">Descripcion</th>
@@ -38,7 +40,11 @@
  
           @foreach ($reportes as $reporte)
             <tr>
+              
               <td>{{$reporte->id}}</td>
+              <td>{{$reporte->id_animal}}</td>
+              <td>{{$reporte->id_user}}</td>
+            
               <td>{{$reporte->latitud}}</td>
               <td>{{$reporte->longitud}}</td>
               <td>{{$reporte->descripcion}}</td>
@@ -55,7 +61,7 @@
 
                    
                       <a class="btn btn-info btn-sm" href="{{route('reporte.edit',$reporte)}}">Editar</a>                 
-               
+                      <a class="btn btn-info btn-sm" href="{{route('reporte.mapa',$reporte)}}">Ver mapa</a> 
 
                     
                     <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 

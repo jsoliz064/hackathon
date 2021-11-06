@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reporte;
+use App\Models\Imagen;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class ReporteController extends Controller
+class ImagenController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +16,8 @@ class ReporteController extends Controller
     public function index()
     {
         //
-        $reportes=Reporte::all();
-        return view('reporte.index',compact('reportes'));
+        $imagens=Imagen::all();
+        return view('imagen.index',compact('imagens'));
     }
 
     /**
@@ -37,38 +38,31 @@ class ReporteController extends Controller
      */
     public function store(Request $request)
     {
+        //
         
-        date_default_timezone_set("America/La_Paz");
-        $reportes=Reporte::create([
-            'id_animal'=>request('id_animal'),
-            'latitud'=>request('latitud'),
-            'longitud'=>request('longitud'),
-            'descripcion'=>request('descripcion'),
-            
-        ]);
-
-       
-        return redirect()->route('reporte.index');
+     
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Reporte  $reporte
+     * @param  \App\Models\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function show(Reporte $reporte)
+    public function show(Imagen $imagen)
     {
         //
+        $codigoReporte = DB::table('reportes')->where('id',$imagen->id_reportes)->value('codigo');
+        return view('imagen.show',compact ('imegen','codigoReporte'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Reporte  $reporte
+     * @param  \App\Models\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function edit(Reporte $reporte)
+    public function edit(Imagen $imagen)
     {
         //
     }
@@ -77,27 +71,21 @@ class ReporteController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Reporte  $reporte
+     * @param  \App\Models\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Reporte $reporte)
+    public function update(Request $request, Imagen $imagen)
     {
         //
     }
-    public function showMapa(Reporte $reporte)
-    {
-       
-       /*  $coordenadas=DB::table('reportes')->where('id_animal',$animal->id)->orderBy('created_at','desc')->get(); */
-      
-        return view('reporte.showMapa',compact ('reporte'));
-    }
+
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Reporte  $reporte
+     * @param  \App\Models\Imagen  $imagen
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Reporte $reporte)
+    public function destroy(Imagen $imagen)
     {
         //
     }

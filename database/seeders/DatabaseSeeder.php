@@ -36,6 +36,7 @@ class DatabaseSeeder extends Seeder
 
         $reporte1=new Reporte();
         $reporte1->id_animal=1;
+        $reporte1->id_user=1;
         $reporte1->latitud='10.5545';
         $reporte1->latitud='10.5545';
         $reporte1->longitud='-85.45468';
