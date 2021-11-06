@@ -6,85 +6,85 @@
   <h1>Reportes</h1>
 @stop
 
-@section('content')
-  <div class="card">
-    <div class="card-header">
-        {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
-        
-          <a class="btn btn-primary btb-sm" href="{{url('/reporte/create')}}">Registrar reporte</a>    
-       
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-body">
-      <table class="table table-striped" id="reportes" >
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">ID animal</th>
-            <th scope="col">ID user</th>
-            <th scope="col">Latitud</th>
-            <th scope="col">Longitud</th>
-            <th scope="col">Descripcion</th>
-            {{--<th scope="col">Tipo</th>
-            <th scope="col">Nombre Cientifico</th>
-            <th scope="col">Orden</th>
-            <th scope="col">Familia</th>
-            <th scope="col" width="0%">Acciones</th>--}}
-            {{-- <th colspan=""></th> --}}
-          </tr>
-        </thead>
-        
-        <tbody>
- 
-          @foreach ($reportes as $reporte)
-            <tr>
+      @section('content')
+        <div class="card">
+          <div class="card-header">
+              {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
               
-              <td>{{$reporte->id}}</td>
-              <td>{{$reporte->id_animal}}</td>
-              <td>{{$reporte->id_user}}</td>
+                <a class="btn btn-primary btb-sm" href="{{url('/reporte/create')}}">Registrar reporte</a>    
             
-              <td>{{$reporte->latitud}}</td>
-              <td>{{$reporte->longitud}}</td>
-              <td>{{$reporte->descripcion}}</td>
-             {{-- <td>{{$reporte->tipo}}</td>
-              <td>{{$reporte->nombre_cientifico}}</td>
-              <td>{{$reporte->orden}}</td>
-              <td>{{$reporte->familia}}</td>--}}
-              <td >
-                <form  action="{{route('reporte.destroy',$reporte)}}" method="post">
-                    @csrf
-                  @method('delete')
-                    <a  class="btn btn-primary btn-sm" href="{{route('reporte.show',$reporte)}}">Ver</a>  
-                  
-                   
-                   
-                     {{--  <a class="btn btn-info btn-sm" href="{{route('reporte.edit',$reporte)}}">Editar</a>  --}} 
-                      
-                      <a class="btn btn-info btn-sm" href="{{route('reporte.imagen',$reporte)}}">Ver Imagenes</a>  
-                      <a class="btn btn-info btn-sm" href="{{route('reporte.mapa',$reporte)}}">Ver mapa</a> 
+          </div>
+        </div>
 
+        <div class="card">
+          <div class="card-body">
+            <table class="table table-striped" id="reportes" >
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">ID animal</th>
+                  <th scope="col">ID user</th>
+                  <th scope="col">Latitud</th>
+                  <th scope="col">Longitud</th>
+                  <th scope="col">Descripcion</th>
+                  {{--<th scope="col">Tipo</th>
+                  <th scope="col">Nombre Cientifico</th>
+                  <th scope="col">Orden</th>
+                  <th scope="col">Familia</th>
+                  <th scope="col" width="0%">Acciones</th>--}}
+                  {{-- <th colspan=""></th> --}}
+                </tr>
+              </thead>
+              
+              <tbody>
+      
+                @foreach ($reportes as $reporte)
+                  <tr>
                     
-                    <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
-                    value="Borrar">Eliminar</button>
+                    <td>{{$reporte->id}}</td>
+                    <td>{{$reporte->id_animal}}</td>
+                    <td>{{$reporte->id_user}}</td>
                   
+                    <td>{{$reporte->latitud}}</td>
+                    <td>{{$reporte->longitud}}</td>
+                    <td>{{$reporte->descripcion}}</td>
+                  {{-- <td>{{$reporte->tipo}}</td>
+                    <td>{{$reporte->nombre_cientifico}}</td>
+                    <td>{{$reporte->orden}}</td>
+                    <td>{{$reporte->familia}}</td>--}}
+                    <td >
+                      <form  action="{{route('reporte.destroy',$reporte)}}" method="post">
+                          @csrf
+                        @method('delete')
+                          <a  class="btn btn-primary btn-sm" href="{{route('reporte.show',$reporte)}}">Ver</a>  
+                        
+                        
+                        
+                          {{--  <a class="btn btn-info btn-sm" href="{{route('reporte.edit',$reporte)}}">Editar</a>  --}} 
+                            
+                            <a class="btn btn-info btn-sm" href="{{route('reporte.imagen',$reporte)}}">Ver Imagenes</a>  
+                            <a class="btn btn-info btn-sm" href="{{route('reporte.mapa',$reporte)}}">Ver mapa</a> 
 
-                </form>
-              </td>    
-            </tr>
-          @endforeach
-        </tbody> 
+                          
+                          <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
+                          value="Borrar">Eliminar</button>
+                        
 
-      </table>
-    </div>
-  </div>
-@stop
+                      </form>
+                    </td>    
+                  </tr>
+                @endforeach
+              </tbody> 
 
-@section('css')
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap5.min.css">
-<link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap5.min.css">
-@stop
+            </table>
+          </div>
+        </div>
+      @stop
+
+    @section('css')
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap5.min.css">
+    @stop
 
 @section('js')
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reporte;
+use App\Models\Imagen;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -97,8 +98,8 @@ class ReporteController extends Controller
     {
        
        /*  $coordenadas=DB::table('reportes')->where('id_animal',$animal->id)->orderBy('created_at','desc')->get(); */
-       $imagenes=DB::table('imagens')->where('id_reporte',$reporte->id)->orderBy('created_at','desc')->get(); 
-      
+      $imagenes=DB::table('imagens')->where('id_reporte',$reporte->id)->orderBy('created_at','desc')->paginate(5);  
+   /*     $imagenes=DB::table('reporte')->where('id_reporte',$reporte->id)->sortBy('created_at','desc')->get();  */
         return view('reporte.showImagen',compact ('reporte','imagenes'));
     }
     /**
