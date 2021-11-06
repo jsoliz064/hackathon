@@ -1,108 +1,121 @@
 @extends('layouts.app')
 
 @section('content')
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+	<link href="login.css"   rel="stylesheet" type="text/css" >
+        <title> Iniciar sesion </title>
+</head>   
+<body> 
+<center>
 <div class="loginColor">
 
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+    <!--<div class="row justify-content-center">-->
+       <div class="titulo">
+            <!--<div class="card">-->
+                <!--<div>-->
+				 <!--<div>-->
+				<br>
+				<span class="texto"> {{ __('Login') }}</span>
+				<br>
+				<br>
+				<img class="icon" src="img/login.png">
+				<br>
+				
+				 <!--</div>-->
 
-                <div class="card-body">
+                <div class="formu">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                      <!--  <div class="form-group row">-->
+                            <label for="email">{{ __('usuario') }}</label>
+							
+                            <!--<div class="col-md-6">-->
+							<br>
+                                <input id="email" type="email" class="input @error('email') is-invalid @enderror" placeholder="email" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                        </div>
+                            <!--</div>-->
+                       <!-- </div>-->
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                      <!--  <div class="form-group row">--><br>
+                            <label for="password">{{ __('contraseña') }}</label>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                           <!-- <div class="col-md-6">-->
+						   <br>
+                                <input id="password" type="password" class="input @error('password') is-invalid @enderror" placeholder="password" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
-                        </div>
+                            <!--</div>-->
+                        <!--</div>-->
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                       <!-- <div >-->
+                           <!--  <div>-->
+                              <!--   <div>-->
+							  <br>
+                                    <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                                    <label class="form-check-label" for="remember">
+                                    <label class="checkbox" for="remember">
                                         {{ __('Remember Me') }}
                                     </label>
-                                </div>
-                            </div>
-                        </div>
+									<br>
+                              <!--   </div>-->
+                          <!--   </div>-->
+                        <!--</div>-->
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                        <!--<div class="form-group row mb-0">-->
+                            <div>
+                                <button type="submit" class="btn2">
                                     {{ __('Login') }}
                                 </button>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn3" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
                             </div>
-                        </div>
+                        <!--</div>-->
                     </form>
                 </div>
-            </div>
+            <!--</div>-->
         </div>
     </div>
-
+</center>
 </div>
+
 @endsection
 
 {{--
-
-<html lang="es">
-    <head>
-      
-        <link href="login.css"   rel="stylesheet" type="text/css" >
-        <meta charset="UTF-8">
-       
-        
-        
-        <title> Iniciar sesion </title>
-    </head>
-    <body>
-        
-           
-            
-
+ 
+<div>
           <div class="login-page">
             <div class="form">
-              <form class="login" action="sesion.php" method="POST">
+              <form action="sesion.php" method="POST">
                
                 <input type="text" name="usuario"  placeholder="Introduzca su usuario"/>
                 <input type="password" name="contraseña" placeholder="Introduzca su contraseña"/>
-                
-                <button>login</button>
+
+                <button >login</button>
                 
               </form>
             </div>
           </div>
+</div>
 
     </body>
    

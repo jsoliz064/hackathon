@@ -1,16 +1,4 @@
 
-body {
- background-color:#003543;
-  margin:0;
-  padding:0;
-}
-.formu{
-
-  margin: auto;
-  font-size:20px;
-  color: white;
-
-}
 .icon{
     width:160px;
      height:100px;
@@ -25,8 +13,8 @@ body {
 	
 }
 .loginColor{
-	height: 440px;
-    background:#ffca66;
+	height: 500px;
+    background:#3DB2FF;
 	margin:10px 150px 10px 150px;
 	padding:20px;
 }
@@ -67,8 +55,7 @@ body {
   padding: 1px 3px;
   font-size: 14px;
 }
-.btn2{
-
+.btn4{
   text-align: center;
   background-color: #DF2E2E;
   border: none;
@@ -78,7 +65,7 @@ body {
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 8px;
-  font-size:25px;
+  font-size:15px;
   font-weight: bold;
   display: block;
   text-decoration: none;
