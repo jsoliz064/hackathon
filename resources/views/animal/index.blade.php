@@ -50,8 +50,8 @@
 
                    
                       <a class="btn btn-info btn-sm" href="{{route('animal.edit',$animal)}}">Editar</a>                 
-               
-
+                      <a class="btn btn-info btn-sm" href="{{route('animal.reporte',$animal)}}">Ver reportes</a> 
+                      <a class="btn btn-info btn-sm" href="{{route('animal.mapa',$animal)}}">Ver mapa</a> 
                     
                     <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
                     value="Borrar">Eliminar</button>

@@ -39,14 +39,13 @@
 
             <div class="form-group">
                 <h5>Tipo:</h5>
-                <select name="tipo" id="select-tipo"  class="focus border-primary  form-control">
+                <select type="text" name="tipo" id="select-tipo"  class="focus border-primary  form-control">
                     <option >Elegir una Opcion</option>
                     <option value="Anfibio">Anfibio</option>
                     <option value="Aves">Aves</option>
                     <option value="Mamífero">Mamífero</option>
                     <option value="Pez">Pez</option>
                     <option value="Roedor">Roedor</option>
-
                     <option value="Reptil">Reptil</option>
 
                 </select>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Animal;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AnimalController extends Controller
 {
@@ -61,7 +62,22 @@ class AnimalController extends Controller
      */
     public function show(Animal $animal)
     {
-        //
+       
+        
+    }
+    public function showReportes(Animal $animal)
+    {
+       
+        $reportes=DB::table('reportes')->where('id_animal',$animal->id)->orderBy('created_at','desc')->get();
+      
+        return view('animal.showReportes',compact ('reportes','animal'));
+    }
+    public function showMapa(Animal $animal)
+    {
+       
+       /*  $coordenadas=DB::table('reportes')->where('id_animal',$animal->id)->orderBy('created_at','desc')->get(); */
+      
+        return view('animal.showMapa',compact ('animal'));
     }
 
     /**

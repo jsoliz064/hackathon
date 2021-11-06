@@ -10,4 +10,9 @@ class Reporte extends Model
     use HasFactory;
     protected $table="reportes";
     protected $guarded=['id','created_at','updated_at'];
+
+    public function animals(){
+
+        return $this->belongsToMany('App\Models\Animal') ;   
+        }
 }
