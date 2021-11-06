@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Reporte')
+@section('title', 'Reporte - imagenes')
 
 @section('content_header')
   <h1>Reportes</h1>
@@ -38,7 +38,7 @@
 
                   <tbody>
                    
-                    @foreach ($imagenes as $imagen)
+                    @foreach ($imagens as $imagen)
                     <tr class="bg-gray-800 text-black"> 
                           <td class="border px-14 py-1">{{$imagen->id}}</td>
                           <td class="border px-14 py-1">{{$imagen->id_reporte}}</td>
@@ -48,7 +48,7 @@
                       --}}
                           <td class="border px-14 py-1">
                          
-                            <form action="{{route('imagen.destroy',$imagen)}}" method="POST">
+                            <form action="{{route('imagens.destroy',$imagen->id)}}" method="POST">
                                 @csrf
                                 @method('delete')
                              <input type="submit" name="submit" value="Eliminar" class="btn btn-danger" >   
@@ -61,15 +61,12 @@
                               </td>
                         </tr>
                         @endforeach
-                        
-                     
-                    
                   </tbody>
                 </table>
  {{-- Pagination --}}
                 <div class="d-flex justify-content-center" >
                
-                 {!! $imagenes->links("pagination::bootstrap-4") !!} 
+                 {!! $imagens->links("pagination::bootstrap-4") !!} 
                 
               </div>
                 </div>

@@ -11,7 +11,7 @@
           <div class="card-header">
               {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
               
-                <a class="btn btn-primary btb-sm" href="{{url('/reporte/create')}}">Registrar reporte</a>    
+                <a class="btn btn-primary btb-sm" href="{{route('reportes.create')}}">Registrar reporte</a>    
             
           </div>
         </div>
@@ -53,17 +53,17 @@
                     <td>{{$reporte->orden}}</td>
                     <td>{{$reporte->familia}}</td>--}}
                     <td >
-                      <form  action="{{route('reporte.destroy',$reporte)}}" method="post">
+                      <form  action="{{route('reportes.destroy',$reporte)}}" method="post">
                           @csrf
                         @method('delete')
-                          <a  class="btn btn-primary btn-sm" href="{{route('reporte.show',$reporte)}}">Ver</a>  
+                          <a  class="btn btn-primary btn-sm" href="{{route('reportes.show',$reporte)}}">Ver</a>  
                         
                         
                         
                           {{--  <a class="btn btn-info btn-sm" href="{{route('reporte.edit',$reporte)}}">Editar</a>  --}} 
                             
-                            <a class="btn btn-info btn-sm" href="{{route('reporte.imagen',$reporte)}}">Ver Imagenes</a>  
-                            <a class="btn btn-info btn-sm" href="{{route('reporte.mapa',$reporte)}}">Ver mapa</a> 
+                            <a class="btn btn-info btn-sm" href="{{route('reportes.imagenes',$reporte)}}">Ver Imagenes</a>  
+                            <a class="btn btn-info btn-sm" href="{{route('reportes.mapa',$reporte)}}">Ver mapa</a> 
 
                           
                           <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 

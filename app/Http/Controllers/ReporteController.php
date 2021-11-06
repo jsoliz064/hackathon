@@ -90,17 +90,15 @@ class ReporteController extends Controller
     {
        
        /*  $coordenadas=DB::table('reportes')->where('id_animal',$animal->id)->orderBy('created_at','desc')->get(); */
-      
+    
         return view('reporte.showMapa',compact ('reporte'));
     }
 
     public function showImagen(Reporte $reporte)
     {
        
-       /*  $coordenadas=DB::table('reportes')->where('id_animal',$animal->id)->orderBy('created_at','desc')->get(); */
-      $imagenes=DB::table('imagens')->where('id_reporte',$reporte->id)->orderBy('created_at','desc')->paginate(5);  
-   /*     $imagenes=DB::table('reporte')->where('id_reporte',$reporte->id)->sortBy('created_at','desc')->get();  */
-        return view('reporte.showImagen',compact ('reporte','imagenes'));
+      $imagens=DB::table('imagens')->where('id_reporte',$reporte->id)->orderBy('created_at','desc')->paginate(5);  
+        return view('reporte.showImagen',compact ('reporte','imagens'));
     }
     /**
      * Remove the specified resource from storage.
@@ -110,6 +108,7 @@ class ReporteController extends Controller
      */
     public function destroy(Reporte $reporte)
     {
-        //
+        $reporte->delete();
+        return redirect()->route('reportes.index');
     }
 }

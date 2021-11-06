@@ -15,7 +15,6 @@
 
     $sentencia=$conexion->query("SELECT MAX(id) AS id FROM reportes");
     $fila=$sentencia->fetch(PDO::FETCH_ASSOC);
-
     echo $fila["id"];
     $sentencia=null;
     $conexion=null;

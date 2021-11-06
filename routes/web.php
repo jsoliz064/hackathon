@@ -23,9 +23,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('animal', App\Http\Controllers\AnimalController::class);
+Route::resource('animals', App\Http\Controllers\AnimalController::class);
 Route::get('animal/reporte/show/{animal}',[AnimalController::class,'showReportes'])->name('animal.reporte');
-Route::resource('reporte', App\Http\Controllers\ReporteController::class);
-Route::get('reporte/mapa/show/{reporte}',[ReporteController::class,'showMapa'])->name('reporte.mapa');
-Route::get('reporte/imagen/show/{reporte}',[ReporteController::class,'showImagen'])->name('reporte.imagen');
-Route::resource('imagen', App\Http\Controllers\ImagenController::class);
+Route::resource('reportes', App\Http\Controllers\ReporteController::class);
+Route::get('reporte/mapa/show/{reporte}',[ReporteController::class,'showMapa'])->name('reportes.mapa');
+Route::get('reporte/imagen/show/{reporte}',[ReporteController::class,'showImagen'])->name('reportes.imagenes');
+Route::resource('imagens', App\Http\Controllers\ImagenController::class);

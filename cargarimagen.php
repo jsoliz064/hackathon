@@ -1,6 +1,6 @@
 <?php
     include 'conexion.php';
-    $id_reporte=$_POST['reporte'];
+    $id_reporte=$_POST['id_reporte'];
     $imagen = $_POST['imagenes'];
     //Pedir id del perteneciente a codigo_expediente
     $sentencia=$conexion->prepare("SELECT * FROM reportes WHERE id=?");
@@ -23,9 +23,9 @@
         date_default_timezone_set("America/La_Paz");
         $fecha=getdate();
         $fechaactual=$fecha["year"] . "-" . $fecha["mon"] . "-" . $fecha["mday"] . " " . $fecha["hours"] . ":" . $fecha["minutes"] . ":" . $fecha["seconds"]; 
-        $sql = "INSERT INTO imagens (id_reporte, ruta, created_at) VALUES (?,?,?)";
+        $sql = "INSERT INTO imagens (id_reporte, url, created_at) VALUES (?,?,?)";
         $stmt= $conexion->prepare($sql);
-        $stmt->execute([$id_reporte,$user,$path, $fechaactual]);
+        $stmt->execute([$id_reporte,$path, $fechaactual]);
     
         
         file_put_contents($path, base64_decode($imagen));
