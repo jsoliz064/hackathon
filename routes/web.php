@@ -15,7 +15,7 @@ use App\Http\Controllers\AnimalController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 
 Auth::routes();
