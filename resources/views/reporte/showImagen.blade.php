@@ -41,8 +41,8 @@
                           <td class="border px-14 py-1">{{$imagen->id_reporte}}</td>
                           <td class="border px-14 py-1">{{$imagen->url}}</td>
                           
-                          <td class="border px-14 py-1"> <img src="images/{{$archivo->imagen}}" width="75%" > </td>
-                     
+                         {{--  <td class="border px-14 py-1"> <img src="images/{{$archivo->imagen}}" width="75%" > </td>
+                      --}}
                           <td class="border px-14 py-1">
                          
                             <form action="{{route('imagen.destroy',$imagen)}}" method="POST">
@@ -66,7 +66,7 @@
  {{-- Pagination --}}
                 <div class="d-flex justify-content-center" >
                
-                  {!! $archivos->links("pagination::bootstrap-4") !!}
+                 {{--  {!! $imagenes->links("pagination::bootstrap-4") !!} --}}
                 
               </div>
                 </div>

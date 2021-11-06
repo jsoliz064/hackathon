@@ -17,7 +17,7 @@
             <h5>Nombre:</h5>
             <input type="text"  name="nombre" value="{{$animal->nombre}}" class="focus border-primary  form-control" >
            
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <h5>Tipo:</h5>
                 <select name="tipo" id="select-tipo"  class="focus border-primary  form-control">
                     <option >Elegir una Opcion</option>
@@ -33,7 +33,7 @@
                 @error('sexo')
                     <p>DEBE INGRESAR BIEN SU SEXO</p>
                 @enderror
-             </div>
+             </div> --}}
 
             <h5>Nombre Cientifico:</h5>
             <input type="text"  name="nombre_cientifico" value="{{$animal->nombre_cientifico}}" class="focus border-primary  form-control" >

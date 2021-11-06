@@ -58,9 +58,11 @@
                   @method('delete')
                     <a  class="btn btn-primary btn-sm" href="{{route('reporte.show',$reporte)}}">Ver</a>  
                   
-
                    
-                      <a class="btn btn-info btn-sm" href="{{route('reporte.edit',$reporte)}}">Editar</a>                 
+                   
+                     {{--  <a class="btn btn-info btn-sm" href="{{route('reporte.edit',$reporte)}}">Editar</a>  --}} 
+                      
+                      <a class="btn btn-info btn-sm" href="{{route('reporte.imagen',$reporte)}}">Ver Imagenes</a>  
                       <a class="btn btn-info btn-sm" href="{{route('reporte.mapa',$reporte)}}">Ver mapa</a> 
 
                     
