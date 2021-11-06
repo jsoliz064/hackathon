@@ -1,11 +1,17 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Reporte')
+
+@section('content_header')
+  <h1>Reportes</h1>
+@stop
 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div style="min-width: 900px" class="card">
-                <div  class="card-header">{{ __('Archivos') }}</div>
+                <div  class="card-header">{{ __('Imagenes') }}</div>
 
                 <div class="card-body">
                   <!--desde aqui empieza-->
@@ -18,16 +24,13 @@
                   
                     
                     <hr>
-                    <h3> Lista de archivos</h3>
+                    <h3> Lista de imagenes</h3>
                     <table class="table-fixed w-full" >
                     <thead>
                         <tr class="bg-gray-800 text-black"> 
                           <th class="border px-4 py-2">ID      </th>
                           <th class="border px-4 py-2">ID Reporte </th>
-                          <th class="border px-4 py-2">Descripcion  </th>
-                          <th class="border px-4 py-2">Imagen     </th>
-                          <th class="border px-4 py-2">Fecha      </th>
-                          <th class="border px-4 py-2">Hora  </th>
+                         
                           <th class="border px-4 py-2">Acciones  </th>
                         </tr>
                           
@@ -66,7 +69,7 @@
  {{-- Pagination --}}
                 <div class="d-flex justify-content-center" >
                
-                 {{--  {!! $imagenes->links("pagination::bootstrap-4") !!} --}}
+                 {!! $imagenes->links("pagination::bootstrap-4") !!} 
                 
               </div>
                 </div>
@@ -74,4 +77,4 @@
         </div>
     </div>
 </div>
-
+@stop

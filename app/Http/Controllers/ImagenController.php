@@ -16,7 +16,10 @@ class ImagenController extends Controller
     public function index()
     {
         //
-        $imagens=Imagen::all();
+    
+    
+
+        $imagens=Imagen::paginate(5);
         return view('imagen.index',compact('imagens'));
     }
 
