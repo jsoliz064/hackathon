@@ -2,7 +2,6 @@
     include 'conexion.php';
     $id_reporte=$_POST['reporte'];
     $imagen = $_POST['imagenes'];
-    $user = $_POST['id_usuario'];
     //Pedir id del perteneciente a codigo_expediente
     $sentencia=$conexion->prepare("SELECT * FROM reportes WHERE id=?");
     $sentencia->execute([$id_reporte]);
