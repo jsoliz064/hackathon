@@ -41,8 +41,8 @@
               <td>{{$animal->familia}}</td>
               <td >
                 <form  action="{{route('animal.destroy',$animal)}}" method="post">
-                  @csrf
-                  
+                    @csrf
+                  @method('delete')
                     <a  class="btn btn-primary btn-sm" href="{{route('animal.show',$animal)}}">Ver</a>  
                   
 
