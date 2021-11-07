@@ -11,7 +11,7 @@
     <div class="card-header">
         {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
         
-          <a class="btn btn-primary btb-sm" href="{{url('/animal/create')}}">Registrar Animal</a>    
+          <a class="btn btn-primary btb-sm" href="{{route('animals.create')}}">Registrar Animal</a>    
        
     </div>
   </div>

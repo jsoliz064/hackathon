@@ -9,29 +9,21 @@
 @section('content')
 
 
-<!DOCTYPE html>
-<html>
   <head>
     <title>Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <!-- jsFiddle will insert css and js -->
   
   </head>
-  <body>
-  
-    <div id="map"></div>
 
+
+    <div id="map"></div>
 	
 	
 	<script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeEsCbkqHxi0EwxEmkeqwOR1_P8qivMxI&callback=initMap&v=weekly&channel=2"
       async
     ></script>
-  </body>
-</html>
-
-
-
 
 
 
