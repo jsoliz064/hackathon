@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Animal;
 use App\Models\Reporte;
+use App\Models\Tipo;
 use App\Models\User;
 
 use Illuminate\Database\Seeder;
@@ -42,5 +43,22 @@ class DatabaseSeeder extends Seeder
         $reporte1->descripcion='tucan visto';
         $reporte1->save();
         
+        $tipo1=new Tipo();
+        $tipo1->nombre='Anfibio';
+        $tipo1->save();
+
+        $tipo2=new Tipo();
+        $tipo2->nombre='Mamifero';
+        $tipo2->save();
+        $tipo3=new Tipo();
+        $tipo3->nombre='Ave';
+        $tipo3->save();
+        $tipo4=new Tipo();
+        $tipo4->nombre='Reptil';
+        $tipo4->save();
+        $tipo6=new Tipo();
+        $tipo6->nombre='Pez';
+        $tipo6->save();
+
     }
 }

@@ -50,7 +50,7 @@ class ReporteController extends Controller
         ]);
 
        
-        return redirect()->route('reporte.index');
+        return redirect()->route('reportes.index');
     }
 
     /**
