@@ -1,14 +1,39 @@
 .prueba{
     color: rgb(255, 254, 253);
-    background-color: rgb(196, 118, 29);
+    /*background-color: rgb(196, 118, 29);*/
     background-image: url("https://image.freepik.com/foto-gratis/disparo-enfoque-selectivo-tucan-pie-rama-arbol_181624-5935.jpg");
-    min-width: 800px; 
-    min-height: 800px;
+   
+
+    height: 680px;
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover; 
-    font: 50px Times, sans-serif;
+ 
     font-weight:bolder;
-    display:flex;    
-    align-items:center;
 }
+h1{
+	   font: 50px Times, sans-serif;
+	  margin: 20px;
+	padding: 50px;
+}
+.login{
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  padding: 10px;
+  width:100%;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: #fe9901;
+  color: white;
+}
+/*
+
+
+
+   min-width: 800px; 
+    min-height: 800px;
+
+display:flex;    
+align-items:center;
+*/
