@@ -1,6 +1,6 @@
 
 body {
- background-color:#003543;
+ background-color:#0c6e19;
   margin:0;
   padding:0;
 }
@@ -8,7 +8,7 @@ body {
 
   margin: auto;
   font-size:20px;
-  color: white;
+  color: rgb(10, 10, 10);
 
 }
 .icon{
@@ -26,7 +26,7 @@ body {
 }
 .loginColor{
 	height: 440px;
-    background:#ffca66;
+    background:rgb(10, 10, 10);
 	margin:10px 150px 10px 150px;
 	padding:20px;
 }
