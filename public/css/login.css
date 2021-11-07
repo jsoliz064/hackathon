@@ -3,6 +3,7 @@ body {
  background-color:#0c6e19;
   margin:0;
   padding:0;
+  
 }
 .formu{
 
@@ -25,10 +26,24 @@ body {
 	
 }
 .loginColor{
+<<<<<<< HEAD
+	    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+  height: 500px;
+  margin: 10px;
+  padding: 0px;
+  background:#ffca66;
+  border: solid #000;
+  border-top-width: 1px;
+  border-left-width: 2px;
+
+=======
 	height: 440px;
     background:rgb(10, 10, 10);
 	margin:10px 150px 10px 150px;
 	padding:20px;
+>>>>>>> 76dd6ebb6bc12f63cc2bbb2914900f1b87a671e8
 }
 .input{
 	
