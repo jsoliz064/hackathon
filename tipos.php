@@ -5,7 +5,7 @@ include 'conexion.php';
 $sentencia=$conexion->prepare("SELECT nombre FROM tipos");
 $sentencia->execute();
 //$fila=$sentencia->fetch(PDO::FETCH_ASSOC);
-$fila=$sentencia->fetchAll(PDO::FETCH_ASSOC);
+$fila=$sentencia->fetchAll(PDO::FETCH_COLUMN, 0);
 if ($fila){
     echo json_encode($fila,JSON_UNESCAPED_UNICODE);
 } 
