@@ -21,7 +21,7 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 Route::get('/excel', function () {
-    return Excel::download(new ReportesExport, 'reportes.xls');
+    return Excel::download(new ReportesExport, 'reportes.xlsx');
 });
 Auth::routes();
 

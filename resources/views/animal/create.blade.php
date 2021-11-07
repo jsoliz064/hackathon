@@ -27,7 +27,7 @@
 
 <div class="card">
     <div class="card-body">
-        <form method="post" action="{{route('animal.store')}}" novalidate >
+        <form method="post" action="{{route('animals.store')}}" novalidate >
 
             @csrf
             <h5>Nombre:</h5>
@@ -81,7 +81,7 @@
             
             <button  class="btn btn-danger btn-sm" type="submit">Registrar</button>
 
-            <a href="{{route('animal.index')}}"class="btn btn-warning text-white btn-sm">Volver</a>
+            <a href="{{route('animals.index')}}"class="btn btn-warning text-white btn-sm">Volver</a>
         </form>
 
     </div>
