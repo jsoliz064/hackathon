@@ -27,6 +27,12 @@ class DatabaseSeeder extends Seeder
         $user1->password=bcrypt('12345');
         $user1->save();
 
+        $user1= new User();
+        $user1->name='admin';
+        $user1->email='admin@gmail.com';
+        $user1->password=bcrypt('1234');
+        $user1->save();
+
         $animal1=new Animal();
         $animal1->nombre='Tucan';
         $animal1->tipo='Ave';
@@ -63,7 +69,7 @@ class DatabaseSeeder extends Seeder
 
         $imagen1=new Imagen();
         $imagen1->id_reporte=1;
-        $imagen1->url='documento1.png';
+        $imagen1->url='documentos/documento1.png';
         $imagen1->save();
     }
 }
