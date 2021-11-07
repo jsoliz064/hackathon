@@ -32,3 +32,4 @@ Route::resource('reportes', App\Http\Controllers\ReporteController::class);
 Route::get('reportes/mapa/show/{reporte}',[ReporteController::class,'showMapa'])->name('reportes.mapa');
 Route::get('reportes/imagen/show/{reporte}',[ReporteController::class,'showImagen'])->name('reportes.imagenes');
 Route::resource('imagens', App\Http\Controllers\ImagenController::class);
+Route::resource('tipos', App\Http\Controllers\TipoController::class);

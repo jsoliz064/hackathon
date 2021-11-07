@@ -254,8 +254,14 @@ return [
             'icon' => 'fas fa-fw fa-user',
         ],
        
-      
+       
         ['header' => 'labels'],
+
+        [
+            'text'       => 'Tipos',
+            'icon_color' => 'far fa-file-alt',
+            'url'        => 'tipos',
+        ],
         [
             'text'       => 'Animales',
             'icon_color' => 'fas fa-paw',
@@ -266,7 +272,7 @@ return [
             'icon_color' => 'far fa-file-alt',
             'url'        => 'reportes',
         ],
-        
+       
     ],
 
     /*
