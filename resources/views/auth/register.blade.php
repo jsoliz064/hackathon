@@ -9,7 +9,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
-	<link href="register.css"   rel="stylesheet" type="text/css" >
+	<!--<link href="register.css"   rel="stylesheet" type="text/css" >-->
         <title> Registrate </title>
 </head>   
 <body> 
