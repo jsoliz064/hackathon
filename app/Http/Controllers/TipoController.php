@@ -15,6 +15,8 @@ class TipoController extends Controller
     public function index()
     {
         //
+        $tipos=Tipo::all();
+        return view('tipo.index',compact('tipos'));
     }
 
     /**
@@ -25,6 +27,7 @@ class TipoController extends Controller
     public function create()
     {
         //
+        return view('tipo.create');
     }
 
     /**
@@ -36,6 +39,14 @@ class TipoController extends Controller
     public function store(Request $request)
     {
         //
+        date_default_timezone_set("America/La_Paz");
+        $tipos=Tipo::create([
+            'nombre'=>request('nombre'),
+            
+        ]);
+
+       
+        return redirect()->route('tipos.index');
     }
 
     /**
@@ -81,5 +92,7 @@ class TipoController extends Controller
     public function destroy(Tipo $tipo)
     {
         //
+        $tipo->delete();
+        return redirect()->route('tipos.index');
     }
 }

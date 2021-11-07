@@ -3,7 +3,7 @@
 @section('title', 'Tipo')
 
 @section('content_header')
-  <h1>Animales</h1>
+  <h1>Tipos</h1>
 @stop
 
 @section('content')
@@ -11,21 +11,19 @@
     <div class="card-header">
         {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
         
-          <a class="btn btn-primary btb-sm" href="{{route('animals.create')}}">Registrar Animal</a>    
+          <a class="btn btn-primary btb-sm" href="{{route('tipos.create')}}">Registrar tipo</a>    
        
     </div>
   </div>
 
   <div class="card">
     <div class="card-body">
-      <table class="table table-striped" id="animales" >
+      <table class="table table-striped" id="tipoes" >
         <thead>
           <tr>
-            <th scope="col">Nombre</th>
+            <th scope="col">ID</th>
             <th scope="col">Tipo</th>
-            <th scope="col">Nombre Cientifico</th>
-            <th scope="col">Orden</th>
-            <th scope="col">Familia</th>
+           
             <th scope="col" width="0%">Acciones</th>
             
             {{-- <th colspan=""></th> --}}
@@ -34,24 +32,17 @@
         
         <tbody>
 
-          @foreach ($animals as $animal)
+          @foreach ($tipos as $tipo)
             <tr>
-              <td>{{$animal->nombre}}</td>
-              <td>{{$animal->tipo}}</td>
-              <td>{{$animal->nombre_cientifico}}</td>
-              <td>{{$animal->orden}}</td>
-              <td>{{$animal->familia}}</td>
+              <td>{{$tipo->id}}</td>
+              <td>{{$tipo->nombre}}</td>
+              
               <td >
-                <form  action="{{route('animals.destroy',$animal)}}" method="post">
+                <form  action="{{route('tipos.destroy',$tipo)}}" method="post">
                     @csrf
                   @method('delete')
-                    <a  class="btn btn-primary btn-sm" href="{{route('animals.show',$animal)}}">Ver</a>  
-                  
-
                    
-                      <a class="btn btn-info btn-sm" href="{{route('animals.edit',$animal)}}">Editar</a>                 
-                      <a class="btn btn-info btn-sm" href="{{route('animals.reporte',$animal)}}">Ver reportes</a> 
-                      
+                     
                     
                     <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
                     value="Borrar">Eliminar</button>
