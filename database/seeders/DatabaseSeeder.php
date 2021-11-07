@@ -3,10 +3,11 @@
 namespace Database\Seeders;
 
 use App\Models\Animal;
+use App\Models\Imagen;
 use App\Models\Reporte;
 use App\Models\Tipo;
 use App\Models\User;
-
+use Faker\Provider\Image;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -60,5 +61,9 @@ class DatabaseSeeder extends Seeder
         $tipo6->nombre='Pez';
         $tipo6->save();
 
+        $imagen1=new Imagen();
+        $imagen1->id_reporte=1;
+        $imagen1->url='documento1.png';
+        $imagen1->save();
     }
 }
