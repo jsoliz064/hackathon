@@ -18,7 +18,7 @@ use Maatwebsite\Excel\Facades\Excel;
 */
 
 Route::get('/', function () {
-    return redirect()->route('login');
+    return view('welcome');
 });
 Route::get('/excel', function () {
     return Excel::download(new ReportesExport, 'reportes.xlsx');

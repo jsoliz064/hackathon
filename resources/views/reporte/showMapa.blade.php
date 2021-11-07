@@ -1,7 +1,12 @@
 
 
 @section('content_header')
-
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+  <title>Mapa</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+</head>
 @stop
 
 @section('content')
@@ -12,16 +17,13 @@
 <<<<<<< HEAD
 -->
 
-  <head>
-  	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
-    <title>Mapa</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  </head>
+
 
 
     <div id="map">
+    
 	</div>
+  <a href="{{route('reportes.index')}}"class="btn btn-warning text-white btn-sm">Volver</a>
 
 	<script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeEsCbkqHxi0EwxEmkeqwOR1_P8qivMxI&callback=initMap&v=weekly&channel=2"
@@ -31,7 +33,9 @@
 <<<<<<< HEAD
 =======
 -->
-  </body>
+
+
+
 <script>
 function initMap() {
   const marcador = { lat: {{$reporte->latitud}}, lng:{{$reporte->longitud}} };

@@ -258,12 +258,12 @@ return [
         ['header' => 'labels'],
         [
             'text'       => 'Animales',
-            'icon_color' => 'red',
+            'icon_color' => 'fas fa-paw',
             'url'        => 'animals',
         ],
         [
             'text'       => 'Reportes',
-            'icon_color' => 'red',
+            'icon_color' => 'far fa-file-alt',
             'url'        => 'reportes',
         ],
         
