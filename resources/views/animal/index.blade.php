@@ -42,15 +42,15 @@
               <td>{{$animal->orden}}</td>
               <td>{{$animal->familia}}</td>
               <td >
-                <form  action="{{route('animal.destroy',$animal)}}" method="post">
+                <form  action="{{route('animals.destroy',$animal)}}" method="post">
                     @csrf
                   @method('delete')
-                    <a  class="btn btn-primary btn-sm" href="{{route('animal.show',$animal)}}">Ver</a>  
+                    <a  class="btn btn-primary btn-sm" href="{{route('animals.show',$animal)}}">Ver</a>  
                   
 
                    
-                      <a class="btn btn-info btn-sm" href="{{route('animal.edit',$animal)}}">Editar</a>                 
-                      <a class="btn btn-info btn-sm" href="{{route('animal.reporte',$animal)}}">Ver reportes</a> 
+                      <a class="btn btn-info btn-sm" href="{{route('animals.edit',$animal)}}">Editar</a>                 
+                      <a class="btn btn-info btn-sm" href="{{route('animals.reporte',$animal)}}">Ver reportes</a> 
                       
                     
                     <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
