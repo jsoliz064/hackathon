@@ -90,6 +90,11 @@ class ImagenController extends Controller
      */
     public function destroy(Imagen $imagen)
     {
-        //
+        $ruta = DB::table('imagens')->where('id',$imagen->id)->value('url');
+        if (file_exists("../" . $ruta)){
+            unlink("../" . $ruta);
+        }
+        $imagen->delete();
+        return redirect()->route('documentos.index');
     }
 }
