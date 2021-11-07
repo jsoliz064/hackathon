@@ -1,0 +1,69 @@
+PHP Warning:  exif_read_data(): Unable to open file in C:\xampp\htdocs\hackathon\resources\views\test.php on line 5
+
+Warning: exif_read_data(): Unable to open file in C:\xampp\htdocs\hackathon\resources\views\test.php on line 5
+No se encontró información de cabecera.<br />
+prueba2.jpg:<br />
+FILE.FileName: IMG_20211106_103303.jpg<br />
+FILE.FileDateTime: 1636209464<br />
+FILE.FileSize: 3754804<br />
+FILE.FileType: 2<br />
+FILE.MimeType: image/jpeg<br />
+FILE.SectionsFound: ANY_TAG, IFD0, THUMBNAIL, EXIF, GPS, INTEROP<br />
+[C 6O/q~hp0V~k~=;1kW}j"(/gQ:6/xqk<br /> ϐC`e*5#\p<  ]쳽+@}^M؝ !7$z^<^zGDVxuL)ن1r.~5׹D/p*R'%7Ĺ(wԡLR۱L]a)qWr>cP%C8m)U_4y+܃nAj4Ѹs,\z@g?Ry(ab8*o_R oQu|!хzDp0l8i:Edvحi<U
+8^)G6!eS# x*qPv4000<br />
+򟕡/|~ވTA t,,)7ctqT-I'8=m䨳)@6pQS(        \#>d8a7)ݣr\ӆ_       x
+q}Uy?AaΠk9,(|\wf/mlFZ|K.&uNř>Ζhܹo                              e/?ݒ$\4+qg1򈿧8r}\E/S~'aڴhc.r
+#AGbe|WTΙߢm$5aY#"E5+Kc_H.Vn%ܙ|*bDD_uE 227<KMk2ת+6ٕ3<`
+{HF/Y4"x7C:ы5{q9+)'[S0r'u.=A3;t/B0g9=89[
+*&,ED.Thumbnail.MimeType: image/jpeg<br />
+_}(#d>O/Vubk<br />te 8<br />
+EXIF.ISOSpeedRatings: 200<br />KQ1.200114.002 V12.0.6.0.QCOMIXM release-keys<br />
+EXIF.ExposureProgram: 0<br />
+EXIF.FNumber: 179/100<br />0:33:05<br />
+EXIF.ExposureTime: 1/474<br />
+EXIF.UndefinedTag:0x9999: {"mirror":false,"?sensor_type":"rear","Hdr":"off","OpMode":32769,"AIScene":0,"FilterId":66048,"ZoomMultiple":1}<br />br />
+EXIF.SensingMethod: 0<br />br />
+EXIF.UndefinedTag:0x8895: 0<br />
+EXIF.SubSecTimeDigitized: 869388<br />
+EXIF.SubSecTimeOriginal: 869388<br />
+EXIF.SubSecTime: 869388<br />at: 3392<br />
+EXIF.FocalLength: 4740/1000<br />
+EXIF.Flash: 16<br />hangeFormatLength: 12083<br />
+EXIF.MeteringMode: 2<br />r />
+EXIF.SceneCaptureType: 0<br /> />
+EXIF.InteroperabilityOffset: 3039<br />
+EXIF.FocalLengthIn35mmFilm: 0<br />
+EXIF.DateTimeDigitized: 2021:11:06 10:33:05<br />y^|>2^ݗi?z-9;/{_ﱻ uXr      c
+EXIF.ExifImageLength: 3000<br />83vO!3iCGRZ]>C-"w+-61!qt@;0]$·US2d<CqgGE:N&hd{VkWGuma
+EXIF.WhiteBalance: 0<br />]j9~H#>vf
+EXIF.DateTimeOriginal: 2021:11:06 10:33:05<br />B_Y9{*^NVpքlChZ&</{1gGQvj1ƛB~��t`k
+EXIF.BrightnessValue: 387/100<br />
+EXIF.ExifImageWidth: 4000<br />
+EXIF.ExposureMode: 0<br />
+EXIF.ApertureValue: 167/100<br />
+EXIF.ComponentsConfiguration: <br />
+EXIF.ColorSpace: 1<br />
+EXIF.SceneType: <br />
+EXIF.ShutterSpeedValue: 8889/1000<br />
+EXIF.ExifVersion: 0220<br />
+EXIF.FlashPixVersion: 0100<br />
+GPS.GPSLatitudeRef: S<br />
+PHP Notice:  Array to string conversion in C:\xampp\htdocs\hackathon\resources\views\test.php on line 12
+
+Notice: Array to string conversion in C:\xampp\htdocs\hackathon\resources\views\test.php on line 12
+GPS.GPSLatitude: Array<br />
+GPS.GPSLongitudeRef: W<br />
+PHP Notice:  Array to string conversion in C:\xampp\htdocs\hackathon\resources\views\test.php on line 12
+
+Notice: Array to string conversion in C:\xampp\htdocs\hackathon\resources\views\test.php on line 12
+GPS.GPSLongitude: Array<br />
+GPS.GPSAltitudeRef: <br />
+GPS.GPSAltitude: 3683683/1000<br />
+PHP Notice:  Array to string conversion in C:\xampp\htdocs\hackathon\resources\views\test.php on line 12
+
+Notice: Array to string conversion in C:\xampp\htdocs\hackathon\resources\views\test.php on line 12
+GPS.GPSTimeStamp: Array<br />
+GPS.GPSProcessingMode: ASCIIGPS<br />
+GPS.GPSDateStamp: 2021:11:06<br />
+INTEROP.InterOperabilityIndex: R98<br />
+INTEROP.InterOperabilityVersion: 0100<br />
