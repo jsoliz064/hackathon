@@ -1,4 +1,4 @@
-
+@extends('adminlte::page')
 
 @section('content_header')
 <head>
@@ -29,6 +29,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeEsCbkqHxi0EwxEmkeqwOR1_P8qivMxI&callback=initMap&v=weekly&channel=2"
       async
     ></script>
+  @stop
 <!--	
 <<<<<<< HEAD
 =======
