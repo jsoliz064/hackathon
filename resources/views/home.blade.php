@@ -3,11 +3,15 @@
 @section('title', 'Inicio')
 
 @section('content_header')
-    <h1>Inicio</h1>
+   
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+<div>
+    <img src="img\home.png" width="1450 px" alt="">
+</div>
+   
+   
 @stop
 
 @section('css')
