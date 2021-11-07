@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateImagenTable extends Migration
+class CreateImagensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -29,6 +29,6 @@ class CreateImagenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('imagen');
+        Schema::dropIfExists('imagens');
     }
 }
