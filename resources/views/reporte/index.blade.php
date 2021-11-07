@@ -22,7 +22,7 @@
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">ID animal</th>
-                  <th scope="col">user</th>
+                  <th scope="col">ID user</th>
                   <th scope="col">Latitud</th>
                   <th scope="col">Longitud</th>
                   <th scope="col">Descripcion</th>
@@ -42,7 +42,8 @@
                     
                     <td>{{$reporte->id}}</td>
                     <td>{{$reporte->id_animal}}</td>
-                    <td>{{DB::table('users')->where('id',$reporte->id)->value('name');  }}</td>
+                    <td>{{$reporte->id_user}}</td>
+                  
                     <td>{{$reporte->latitud}}</td>
                     <td>{{$reporte->longitud}}</td>
                     <td>{{$reporte->descripcion}}</td>
