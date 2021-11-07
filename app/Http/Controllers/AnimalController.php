@@ -51,7 +51,7 @@ class AnimalController extends Controller
         ]);
 
        
-        return redirect()->route('animal.index');
+        return redirect()->route('animals.index');
     }
 
     /**
@@ -105,7 +105,7 @@ class AnimalController extends Controller
 
        
 
-        return redirect()->route('animal.index');
+        return redirect()->route('animals.index');
     }
 
     /**
@@ -118,6 +118,6 @@ class AnimalController extends Controller
     {
         //
         $animal->delete();
-        return redirect()->route('animal.index');
+        return redirect()->route('animals.index');
     }
 }
