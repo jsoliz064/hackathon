@@ -97,9 +97,16 @@ class ReporteController extends Controller
     public function showImagen(Reporte $reporte)
     {
        
-        $imagens=DB::table('imagens')->where('id_reporte',$reporte->id)->orderBy('created_at','desc')->paginate(5);  
+      $imagens=DB::table('imagens')->where('id_reporte',$reporte->id)->orderBy('created_at','desc');  
         return view('imagen.post',compact ('reporte','imagens'));
     }
+  /*   public function data(Reporte $reporte)
+    {
+       
+      $imagens=DB::table('imagens')->where('id_reporte',$reporte->id)->orderBy('created_at','desc');  
+        return view('imagen.data',compact ('reporte','imagens'));
+    }
+ */
     /**
      * Remove the specified resource from storage.
      *
