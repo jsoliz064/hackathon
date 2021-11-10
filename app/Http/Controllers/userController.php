@@ -18,18 +18,19 @@ class userController extends Controller
     {   //               ('can:materias.index') aprobando permiso, ->only('index') solo para el metodo index
         $this->middleware('can:admin.users.index')->only('index');
         $this->middleware('can:admin.users.create')->only('create', 'store');
-       /*  $this->middleware('can:admin.users.edit')->only('edit', 'update'); */
+        $this->middleware('can:admin.users.edit')->only('edit', 'update');
         $this->middleware('can:admin.users.destroy')->only('destroy');
         $this->middleware('can:login');
 
     }
     public function index()
     {
-        $users = DB::table('users')
+      /*   $users = DB::table('users')
         ->join('model_has_roles', 'model_id', '=', 'users.id')
         ->join('roles', 'roles.id', '=', 'model_has_roles.role_id')
         ->select('users.*', 'roles.name as roles_name')
-        ->get();
+        ->get(); */
+        $users=User::all();
         return view('admin.users.index', compact('users'));
     }
 

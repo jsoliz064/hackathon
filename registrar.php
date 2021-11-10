@@ -11,6 +11,15 @@
         $sql = "INSERT INTO users (name, email, password, created_at) VALUES (?,?,?,?)";
         $stmt= $conexion->prepare($sql);
         $stmt->execute([$nombre,$email,$contraseña, $fechaactual]);
+
+        $sentencia=$conexion->query("SELECT MAX(id) AS id FROM users");
+        $fila=$sentencia->fetch(PDO::FETCH_ASSOC);
+
+        $sql = "INSERT INTO model_has_roles (role_id, model_type, model_id) VALUES (?,?,?)";
+        $stmt= $conexion->prepare($sql);
+        $stmt->execute(["2","App\Models\User",$fila["id"]]);
+
+
         echo "Registrado";
     $sentencia=null;
     $conexion=null;

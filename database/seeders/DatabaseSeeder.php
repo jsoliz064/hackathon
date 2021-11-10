@@ -22,17 +22,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(RolesSeeder::class);
         $this->call(UserSeeder::class);
-        $user1= new User();
-        $user1->name='maria';
-        $user1->email='maria@gmail.com';
-        $user1->password=bcrypt('12345');
-        $user1->save();
-
-        $user1= new User();
-        $user1->name='admin';
-        $user1->email='admin@gmail.com';
-        $user1->password=bcrypt('1234');
-        $user1->save();
+      
 
         $animal1=new Animal();
         $animal1->nombre='Tucan';

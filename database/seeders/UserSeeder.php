@@ -19,5 +19,11 @@ class UserSeeder extends Seeder
             'email'=>'jsoliz064@gmail.com',
             'password'=>password_hash('1234',PASSWORD_DEFAULT),
         ])->assignRole('Admin');
+
+        User::create([
+            'name'=>'maria',
+            'email'=>'maria@gmail.com',
+            'password'=>password_hash('12345',PASSWORD_DEFAULT),
+        ])->assignRole('Admin');
     }
 }

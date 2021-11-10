@@ -19,7 +19,7 @@ use App\Http\Controllers\userController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
 Route::get('/excel', function () {
     return Excel::download(new ReportesExport, 'reportes.xls');
