@@ -42,7 +42,7 @@
                     
                     <td>{{$reporte->id}}</td>
                     <td>{{$reporte->id_animal}}</td>
-                    <td>{{$reporte->id_user}}</td>
+                    <td>{{DB::table('users')->where('id',$reporte->id_user)->value('name')}}</td>
                   
                     <td>{{$reporte->latitud}}</td>
                     <td>{{$reporte->longitud}}</td>
