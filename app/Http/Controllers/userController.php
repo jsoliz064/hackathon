@@ -18,7 +18,7 @@ class userController extends Controller
     {   //               ('can:materias.index') aprobando permiso, ->only('index') solo para el metodo index
         $this->middleware('can:admin.users.index')->only('index');
         $this->middleware('can:admin.users.create')->only('create', 'store');
-        $this->middleware('can:admin.users.edit')->only('edit', 'update');
+       /*  $this->middleware('can:admin.users.edit')->only('edit', 'update'); */
         $this->middleware('can:admin.users.destroy')->only('destroy');
         $this->middleware('can:login');
 
