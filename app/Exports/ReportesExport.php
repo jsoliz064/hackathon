@@ -13,7 +13,7 @@ class ReportesExport implements FromCollection
     */
     public function collection()
     {
-        $report=Reporte::select('id','latitud','longitud')->get();
+        $report=Reporte::select('id','longitud','latitud')->get();
         
         $reportes=DB::select("SELECT id,latitud,longitud FROM reportes");
         
