@@ -25,12 +25,12 @@ class userController extends Controller
     }
     public function index()
     {
-      /*   $users = DB::table('users')
+        $users = DB::table('users')
         ->join('model_has_roles', 'model_id', '=', 'users.id')
         ->join('roles', 'roles.id', '=', 'model_has_roles.role_id')
         ->select('users.*', 'roles.name as roles_name')
-        ->get(); */
-        $users=User::all();
+        ->get();
+        /* $users=User::all(); */
         return view('admin.users.index', compact('users'));
     }
 
