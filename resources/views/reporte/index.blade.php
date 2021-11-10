@@ -22,7 +22,7 @@
                 <tr>
                   <th scope="col">ID</th>
                   <th scope="col">ID animal</th>
-                  <th scope="col">ID user</th>
+                  <th scope="col">Usuario</th>
                   <th scope="col">Latitud</th>
                   <th scope="col">Longitud</th>
                   <th scope="col">Descripcion</th>
