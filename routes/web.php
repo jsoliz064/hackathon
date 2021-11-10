@@ -6,6 +6,7 @@ use App\Http\Controllers\AnimalController;
 use App\Http\Controllers\ReporteController;
 use App\Exports\ReportesExport;
 use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\userController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,3 +34,6 @@ Route::get('reportes/mapa/show/{reporte}',[ReporteController::class,'showMapa'])
 Route::get('reportes/imagen/show/{reporte}',[ReporteController::class,'showImagen'])->name('reportes.imagenes');
 Route::resource('imagens', App\Http\Controllers\ImagenController::class);
 Route::resource('tipos', App\Http\Controllers\TipoController::class);
+Route::get('user/profile/',[userController::class,'show2'])->name('user.show');
+Route::patch('user/update/',[userController::class,'update2'])->name('user.update');
+Route::resource('users',userController::class)->names('admin.users');

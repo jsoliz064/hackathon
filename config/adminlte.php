@@ -247,15 +247,27 @@ return [
             'can'  => 'manage-blog',
         ],
       
-        ['header' => 'account_settings'],
+        ['header' => 'CONFIGURACION'],
         [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
+            'text' => 'Perfil',
+            'url'  => 'user/profile/',
             'icon' => 'fas fa-fw fa-user',
+        ],
+
+        ['header' => 'ADMINISTRAR',
+        'can' => 'admin.users.index',
+        ],
+        //Usuarios------------------------------------------------------------------
+        [
+            'text' => 'Usuarios',
+            'route'  => 'admin.users.index',
+            'icon' => 'fas fa-user-lock',
+            'icon_color'=>'primary',
+            'can' => 'admin.users.index'
         ],
        
        
-        ['header' => 'labels'],
+        ['header' => 'Gestionar'],
 
         [
             'text'       => 'Tipos',
