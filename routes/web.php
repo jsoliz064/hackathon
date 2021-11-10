@@ -21,7 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/excel', function () {
-    return Excel::download(new ReportesExport, 'reportes.xlsx');
+    return Excel::download(new ReportesExport, 'reportes.xls');
 });
 Auth::routes();
 
