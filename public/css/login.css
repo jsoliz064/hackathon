@@ -1,13 +1,26 @@
+/*
+
+#191A19 Black
+#1E5128 Dark
+#4E9F3D Green
+#D8E9A8 Green
+rgb(25, 26, 25)       Black
+rgb(30, 81, 40)       Black
+rgb(78, 159, 61)      Green
+rgb(216, 233, 168)    Green
+
+/*/
+
 
 body {
-  background-color:#0c6e19;
+  background-color:rgb(78, 159, 61);
   margin:0;
   padding:0;
 }
 .formu{
   width:100%;
   font-size:20px;
-	color:#FFEDDA;
+	color:#ffff;
 
 }
 .icon{
@@ -19,14 +32,14 @@ body {
 .texto{
 	font-size:28px;
 	text-align: center;
-	color:#FFEDDA;
+	color:#ffff;
 }
 .loginColor{
   margin: auto;
   width:80%;
   height:100%;
   padding: 5%;
-  background:rgb(10, 10, 10);
+  background-color: rgb(25, 26, 25);
 }
 .input{
 	width: 200px;
@@ -36,16 +49,14 @@ body {
 	border: none;
   border-radius: 8px;
 	transition: width 0.2s ease-in-out;
-	background-color:#eeeeee;
+	background-color:#ffff;
 	font-size:18px;
 	text-align: center;
-  color:#564a4a;
 
 }
 
 .titulo{
   font-size:12px;
-  color:#ef6864;
   font-weight: bold;
 
 }
@@ -66,9 +77,9 @@ body {
   width: 200px;
 	padding: 8px 20px;
   text-align: center;
-  background-color: #DF2E2E;
+  background-color:#d62828;
   border: none;
-  color: white;
+  color: #ffff;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
