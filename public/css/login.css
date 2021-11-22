@@ -1,76 +1,56 @@
 
 body {
- background-color:#0c6e19;
+  background-color:#0c6e19;
   margin:0;
   padding:0;
-  
 }
 .formu{
-
-  margin: auto;
+  width:100%;
   font-size:20px;
-  color: rgb(10, 10, 10);
+	color:#FFEDDA;
 
 }
 .icon{
-    width:160px;
-     height:100px;
-    	text-align:center;
+  width:160px;
+  height:100px;
+  text-align:center;
 }
 
 .texto{
-
 	font-size:28px;
 	text-align: center;
 	color:#FFEDDA;
-	
 }
 .loginColor{
-<<<<<<< HEAD
-	    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-  height: 500px;
-  margin: 10px;
-  padding: 0px;
-  background:#ffca66;
-  border: solid #000;
-  border-top-width: 1px;
-  border-left-width: 2px;
-
-=======
-	height: 440px;
-    background:rgb(10, 10, 10);
-	margin:10px 150px 10px 150px;
-	padding:20px;
->>>>>>> 76dd6ebb6bc12f63cc2bbb2914900f1b87a671e8
+  margin: auto;
+  width:80%;
+  height:100%;
+  padding: 5%;
+  background:rgb(10, 10, 10);
 }
 .input{
-	
-	width: 250px;
+	width: 200px;
 	padding: 8px 20px;
 	margin: 1px;
 	box-sizing: border-box;
 	border: none;
   border-radius: 8px;
-	border-bottom: 1px solid #ffd369;
 	transition: width 0.2s ease-in-out;
 	background-color:#eeeeee;
 	font-size:18px;
 	text-align: center;
   color:#564a4a;
-	
-	
+
 }
 
 .titulo{
-   font-size:12px;
-   color:#ef6864;
- font-weight: bold;
+  font-size:12px;
+  color:#ef6864;
+  font-weight: bold;
+
 }
 .texto{
   text-align: center;
- 
 }
 .checkbox{
   color: #ffff;
@@ -83,12 +63,12 @@ body {
   font-size: 14px;
 }
 .btn2{
-
+  width: 200px;
+	padding: 8px 20px;
   text-align: center;
   background-color: #DF2E2E;
   border: none;
   color: white;
-  padding: 8px 85px;
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
@@ -97,6 +77,5 @@ body {
   font-weight: bold;
   display: block;
   text-decoration: none;
-  
- 
 }
+
