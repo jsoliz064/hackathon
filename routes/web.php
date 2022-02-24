@@ -28,12 +28,12 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('animals', App\Http\Controllers\AnimalController::class);
-Route::get('animals/reportes/show/{animal}',[AnimalController::class,'showReportes'])->name('animals.reporte');
+Route::get('animals/reportes/show/{animal}', [AnimalController::class, 'showReportes'])->name('animals.reporte');
 Route::resource('reportes', App\Http\Controllers\ReporteController::class);
-Route::get('reportes/mapa/show/{reporte}',[ReporteController::class,'showMapa'])->name('reportes.mapa');
-Route::get('reportes/imagen/show/{reporte}',[ReporteController::class,'showImagen'])->name('reportes.imagenes');
+Route::get('reportes/mapa/show/{reporte}', [ReporteController::class, 'showMapa'])->name('reportes.mapa');
+Route::get('reportes/imagen/show/{reporte}', [ReporteController::class, 'showImagen'])->name('reportes.imagenes');
 Route::resource('imagens', App\Http\Controllers\ImagenController::class);
 Route::resource('tipos', App\Http\Controllers\TipoController::class);
-Route::get('user/profile/',[userController::class,'show2'])->name('user.show');
-Route::patch('user/update/',[userController::class,'update2'])->name('user.update');
-Route::resource('users',userController::class)->names('admin.users');
+Route::get('user/profile/', [userController::class, 'show2'])->name('user.show');
+Route::patch('user/update/', [userController::class, 'update2'])->name('user.update');
+Route::resource('users', userController::class)->names('admin.users');

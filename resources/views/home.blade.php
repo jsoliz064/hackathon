@@ -3,15 +3,15 @@
 @section('title', 'Inicio')
 
 @section('content_header')
-   
+
 @stop
 
 @section('content')
-<div>
-    <img src="img\home.png" width="1450 px" alt="">
-</div>
-   
-   
+    <div>
+        <img src="img\home.png" width="1450 px" alt="">
+    </div>
+
+
 @stop
 
 @section('css')
@@ -19,5 +19,5 @@
 @stop
 
 @section('js')
-    
+
 @stop
